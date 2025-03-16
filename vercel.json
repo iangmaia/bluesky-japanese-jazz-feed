@@ -1,0 +1,22 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "src/index.ts",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "src/index.ts"
+    }
+  ],
+  "env": {
+    "FEEDGEN_PORT": "3000",
+    "FEEDGEN_LISTENHOST": "0.0.0.0",
+    "FEEDGEN_SQLITE_LOCATION": "/tmp/db.sqlite",
+    "FEEDGEN_SUBSCRIPTION_ENDPOINT": "wss://bsky.network",
+    "FEEDGEN_SUBSCRIPTION_RECONNECT_DELAY": "3000"
+  }
+} 
