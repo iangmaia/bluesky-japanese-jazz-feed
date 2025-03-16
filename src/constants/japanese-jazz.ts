@@ -15,7 +15,37 @@ export const JAPANESE_KEYWORDS = [
   'ジャズ喫茶', // Jazz kissa
   'ジャズ', // Jazz
   '日本のジャズ', // Japanese jazz
+  'jazz kissa',
 
+  // variations
+  'japanese fusion',
+  'japanese free jazz',
+  'japanese freejazz',
+  'fusion japonês',           // Portuguese
+  'free jazz japonês',        // Portuguese
+  'fusion japonais',          // French
+  'free jazz japonais',       // French
+  'japanische fusion',        // German
+  'japanischer freejazz',     // German
+  'fusión japonés',           // Spanish
+  'free jazz japonés',        // Spanish
+  'fusion giapponese',        // Italian
+  'free jazz giapponese',     // Italian
+  'japanse fusion',           // Dutch
+  'japanse free jazz',        // Dutch
+  'japansk fusion',           // Swedish/Danish
+  'japansk free jazz',        // Swedish/Danish
+  'japanilainen fusion',      // Finnish
+  'japanilainen free jazz',   // Finnish
+  'японский джаз-фьюжн',      // Russian
+  'японский фри-джаз',        // Russian
+  '일본 퓨전 재즈',              // Korean
+  '일본 프리 재즈',              // Korean
+  '日本爵士融合',              // Chinese (Simplified)
+  '日本自由爵士',              // Chinese (Simplified)
+  '日本ジャズフュージョン',      // Japanese
+  '日本フリージャズ',           // Japanese
+  
   // Japanese jazz direct mentions
   'japanese jazz',
   'jazz japonês',      // Portuguese
@@ -30,9 +60,6 @@ export const JAPANESE_KEYWORDS = [
   '일본 재즈',           // Korean
   '日本爵士',           // Chinese (Simplified)
   '日本ジャズ',         // Japanese
-
-  // kissa
-  'jazz kissa',
 ]
 
 // Japanese jazz artists (names in English and Japanese)
@@ -40,7 +67,11 @@ export const ARTISTS = [
   // Bands
   'casiopea',
   'カシオペア', // Casiopea in Japanese
-  
+  'acid mothers temple',
+  'アシッドマザーズテンプル', // Acid Mothers Temple in Japanese
+  'koenji hyakkei',
+  'koenjihyakkei',
+
   // Percussionists
   'masahiko togashi',
   '富樫雅彦', // Masahiko Togashi in Japanese
@@ -57,6 +88,8 @@ export const ARTISTS = [
   '猪俣猛', // Takeshi Inomata in Japanese
   'takeo moriyama',
   '森山威男', // Takeo Moriyama in Japanese
+  'tatsuya yoshida',
+  '吉田達也', // Tatsuya Yoshida in Japanese
 
   // Guitarists
   'masayuki takayanagi',
