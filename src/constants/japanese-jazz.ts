@@ -189,10 +189,10 @@ export const ARTISTS = [
 // Japanese jazz record labels
 export const LABELS = [
   'deep jazz reality',
-  'east wind',
-  'king records',
-  'nippon columbia',
+  // 'east wind',
+  // 'king records',
+  // 'nippon columbia',
   'takt jazz series',
-  'teichiku records',
-  'three blind mice',
+  // 'teichiku records',
+  // 'three blind mice',
 ]
