@@ -194,6 +194,5 @@ export const LABELS = [
   'nippon columbia',
   'takt jazz series',
   'teichiku records',
-  'tbm',
   'three blind mice',
 ]

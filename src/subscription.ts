@@ -41,7 +41,8 @@ export class FirehoseSubscription extends FirehoseSubscriptionBase {
     // For debugging: log Japanese jazz posts
     for (const post of ops.posts.creates) {
       if (isJapaneseJazzPost(post.record.text)) {
-        console.log('Found Japanese jazz post:', post.record.text.substring(0, 100) + '...')
+        const postUrl = `https://bsky.app/profile/${post.author}/post/${post.uri.split('/').pop()}`
+        console.log('Found Japanese jazz post:', post.record.text.substring(0, 100) + '...', 'URL:', postUrl)
       }
     }
 
