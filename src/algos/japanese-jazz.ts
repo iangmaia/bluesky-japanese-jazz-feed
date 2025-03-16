@@ -5,6 +5,8 @@ import { AppContext } from '../config'
 export const shortname = 'japanese-jazz'
 
 export const handler = async (ctx: AppContext, params: QueryParams) => {
+  // Consider adding relevance scoring or other filtering logic here
+  // For example, you could prioritize posts with multiple matches
   let builder = ctx.db
     .selectFrom('post')
     .selectAll()
@@ -13,7 +15,9 @@ export const handler = async (ctx: AppContext, params: QueryParams) => {
     .limit(params.limit)
 
   if (params.cursor) {
-    const timeStr = new Date(parseInt(params.cursor, 10)).toISOString()
+    // Parse the compound cursor (timestamp::cid)
+    const [timestamp, cid] = params.cursor.split('::')
+    const timeStr = new Date(parseInt(timestamp, 10)).toISOString()
     builder = builder.where('post.indexedAt', '<', timeStr)
   }
   const res = await builder.execute()
@@ -25,7 +29,8 @@ export const handler = async (ctx: AppContext, params: QueryParams) => {
   let cursor: string | undefined
   const last = res.at(-1)
   if (last) {
-    cursor = new Date(last.indexedAt).getTime().toString(10)
+    // Create a compound cursor with timestamp::cid
+    cursor = `${new Date(last.indexedAt).getTime().toString(10)}::${last.cid}`
   }
 
   return {
