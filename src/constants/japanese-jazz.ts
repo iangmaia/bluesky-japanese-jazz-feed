@@ -65,31 +65,30 @@ export const JAPANESE_KEYWORDS = [
 // Japanese jazz artists (names in English and Japanese)
 export const ARTISTS = [
   // Bands
-  'casiopea',
-  'カシオペア', // Casiopea in Japanese
-  'acid mothers temple',
-  'アシッドマザーズテンプル', // Acid Mothers Temple in Japanese
-  'koenji hyakkei',
-  'koenjihyakkei',
+  // 'casiopea',
+  // 'カシオペア', // Casiopea in Japanese
+  // 'acid mothers temple',
+  // 'アシッドマザーズテンプル', // Acid Mothers Temple in Japanese
+  // 'koenjihyakkei',
 
   // Percussionists
   'masahiko togashi',
-  '富樫雅彦', // Masahiko Togashi in Japanese
+  // '富樫雅彦', // Masahiko Togashi in Japanese
   'akira ishikawa',
-  '石川晶', // Akira Ishikawa in Japanese
+  // '石川晶', // Akira Ishikawa in Japanese
   'ryojiro furusawa',
   '古澤良治郎', // Ryojiro Furusawa in Japanese
   'george kawaguchi',
-  'ジョージ川口', // George Kawaguchi in Japanese
-  '川口ジョージ', // George Kawaguchi's Japanese name
+  // 'ジョージ川口', // George Kawaguchi in Japanese
+  // '川口ジョージ', // George Kawaguchi's Japanese name
   'hideo shiraki',
   '白木秀雄', // Hideo Shiraki in Japanese
   'takeshi inomata',
   '猪俣猛', // Takeshi Inomata in Japanese
   'takeo moriyama',
   '森山威男', // Takeo Moriyama in Japanese
-  'tatsuya yoshida',
-  '吉田達也', // Tatsuya Yoshida in Japanese
+  // 'tatsuya yoshida',
+  // '吉田達也', // Tatsuya Yoshida in Japanese
 
   // Guitarists
   'masayuki takayanagi',
@@ -196,3 +195,34 @@ export const LABELS = [
   // 'teichiku records',
   // 'three blind mice',
 ]
+
+/**
+ * Function to check if a post is related to Japanese jazz
+ * @param text The text content to check
+ * @returns true if the text contains Japanese jazz related content
+ */
+export function isJapaneseJazzPost(text: string): boolean {
+  const lowerText = text.toLowerCase()
+  
+  // Check for hashtags
+  if (HASHTAGS.some(tag => lowerText.includes(tag.toLowerCase()))) {
+    return true
+  }
+  
+  // Check for Japanese keywords
+  if (JAPANESE_KEYWORDS.some(keyword => text.includes(keyword))) {
+    return true
+  }
+  
+  // Check for artists
+  if (ARTISTS.some(artist => lowerText.includes(artist.toLowerCase()))) {
+    return true
+  }
+  
+  // Check for labels
+  if (LABELS.some(label => lowerText.includes(label.toLowerCase()))) {
+    return true
+  }
+  
+  return false
+}

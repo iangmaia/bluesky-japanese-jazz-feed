@@ -3,34 +3,7 @@ import {
   isCommit,
 } from './lexicon/types/com/atproto/sync/subscribeRepos'
 import { FirehoseSubscriptionBase, getOpsByType } from './util/subscription'
-import { HASHTAGS, JAPANESE_KEYWORDS, ARTISTS, LABELS } from './constants/japanese-jazz'
-
-// Function to check if post contains Japanese jazz content
-function isJapaneseJazzPost(text: string): boolean {
-  const lowerText = text.toLowerCase()
-  
-  // Check for hashtags
-  if (HASHTAGS.some(tag => lowerText.includes(tag.toLowerCase()))) {
-    return true
-  }
-  
-  // Check for Japanese keywords
-  if (JAPANESE_KEYWORDS.some(keyword => text.includes(keyword))) {
-    return true
-  }
-  
-  // Check for artists
-  if (ARTISTS.some(artist => lowerText.includes(artist.toLowerCase()))) {
-    return true
-  }
-  
-  // Check for labels
-  if (LABELS.some(label => lowerText.includes(label.toLowerCase()))) {
-    return true
-  }
-  
-  return false
-}
+import { isJapaneseJazzPost } from './constants/japanese-jazz'
 
 export class FirehoseSubscription extends FirehoseSubscriptionBase {
   async handleEvent(evt: RepoEvent) {
