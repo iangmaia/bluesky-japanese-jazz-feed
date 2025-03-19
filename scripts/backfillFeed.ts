@@ -36,7 +36,7 @@ interface Post {
   indexedAt: string;
 }
 
-async function searchAndBackfill() {
+export async function searchAndBackfill() {
   try {
     console.log('Starting backfill process...')
     
@@ -175,5 +175,8 @@ async function searchAndBackfill() {
   }
 }
 
-// Run the backfill process
-searchAndBackfill()
+// Move the direct execution to a conditional
+if (require.main === module) {
+  // Run the backfill process when script is executed directly
+  searchAndBackfill()
+}
