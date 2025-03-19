@@ -11,7 +11,8 @@
     "unpublishFeed": "ts-node scripts/unpublishFeedGen.ts",
     "start": "ts-node src/index.ts",
     "build": "tsc",
-    "vercel-build": "tsc"
+    "vercel-build": "tsc",
+    "backfill": "ts-node scripts/backfillFeed.ts"
   },
   "dependencies": {
     "@atproto/api": "^0.13.28",

@@ -88,6 +88,39 @@ yarn publishFeed
 
 Follow the prompts to enter your BlueSky credentials and feed information.
 
+### Populating the Feed with Historical Posts
+
+When you first create your feed, it will be empty as it only captures new posts. To populate it with existing Japanese jazz content:
+
+1. Run the backfill script:
+```bash
+yarn backfill
+```
+
+This script will:
+- Search for posts with Japanese jazz hashtags (#jjazz, #japanesejazz, etc.)
+- Find posts mentioning Japanese jazz artists
+- Add all matching posts to your feed's database
+- Remove duplicates automatically
+
+The process may take several minutes depending on how many posts are found.
+
+#### Using Environment Variables for Authentication
+
+You can set your Bluesky credentials as environment variables to avoid entering them each time:
+
+```bash
+# Add these to your .env file
+BLUESKY_HANDLE=your-handle.bsky.social
+BLUESKY_PASSWORD=your-app-password
+```
+
+Or run the backfill script with environment variables directly:
+
+```bash
+BLUESKY_HANDLE=your-handle.bsky.social BLUESKY_PASSWORD=your-app-password yarn backfill
+```
+
 ### Deployment
 
 For production deployment, you'll need:

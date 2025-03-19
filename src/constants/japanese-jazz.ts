@@ -107,9 +107,10 @@ export const ARTISTS = [
   '原信夫', // Nobuo Hara in Japanese
   
   // Big Band
-  'new herd orchestra',
-  'new herd',
-  'ニュー・ハード', // New Herd in Japanese
+  'Toshiyuki Miyama & The New Herd',
+  'Toshiyuki Miyama And His New Herd',
+  'Toshiyuki Miyama & His New Herd',
+  'Nobuo Hara & His Sharps & Flats',
   
   // Pianists
   'toshiko akiyoshi',
