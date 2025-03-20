@@ -1,6 +1,7 @@
-# Japanese Jazz Feed for BlueSky
+# Japanese Jazz Real-Time Feed for BlueSky
 
-This is a custom BlueSky feed generator focused on Japanese jazz content. The feed filters posts related to Japanese jazz artists, jazz kissa (jazz cafes), and Japanese jazz labels.
+This is a custom Bluesky feed generator focused on Japanese jazz content. The feed filters posts related to Japanese jazz artists, jazz kissa (jazz cafes), and Japanese jazz labels.
+It subscribes itself to Bluesky's real-time feed and pushes the posts immediately.
 
 This project is based on https://github.com/bluesky-social/feed-generator
 
@@ -49,7 +50,7 @@ Posts mentioning Japanese jazz record labels are included, such as:
 
 1. Clone this repository:
 ```bash
-git clone https://github.com/iangmaia/bluesky-japanese-jazz-feed
+git clone https://github.com/iangmaia/bluesky-japanese-jazz-realtime-feed
 cd bluesky-japanese-jazz-feed
 ```
 
