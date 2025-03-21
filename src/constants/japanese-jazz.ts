@@ -13,7 +13,6 @@ export const HASHTAGS = [
 // Japanese keywords related to jazz
 export const JAPANESE_KEYWORDS = [
   'ジャズ喫茶', // Jazz kissa
-  'ジャズ', // Jazz
   '日本のジャズ', // Japanese jazz
   'jazz kissa',
 

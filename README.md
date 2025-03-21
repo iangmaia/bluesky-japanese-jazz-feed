@@ -17,7 +17,6 @@ The feed includes posts that mention:
 
 ### Japanese Keywords
 - ジャズ喫茶 (Jazz kissa)
-- ジャズ (Jazz)
 - 日本のジャズ (Japanese jazz)
 
 ### Japanese Jazz Artists
